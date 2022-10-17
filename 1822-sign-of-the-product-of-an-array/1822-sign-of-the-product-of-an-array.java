@@ -5,7 +5,7 @@ class Solution {
             if(nums[i]==0){
                 return 0;
             }
-            else if(nums[i]<0){
+            if(nums[i]<0){
                 s++;   // here we count how many times minus digit occured if it is occured even time then it is +ve
             }
         }
