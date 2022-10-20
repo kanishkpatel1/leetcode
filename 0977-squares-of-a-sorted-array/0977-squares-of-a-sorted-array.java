@@ -1,4 +1,4 @@
-
+//method 1---> easy
 //  class Solution {
 //     public int[] sortedSquares(int[] nums) {
 //         for(int i=0;i<nums.length;i++){
@@ -10,6 +10,8 @@
 //     }
 // }
 
+
+// method ----> 2
 class Solution{
     public int[] sortedSquares(int[] nums){
         int n=nums.length;
