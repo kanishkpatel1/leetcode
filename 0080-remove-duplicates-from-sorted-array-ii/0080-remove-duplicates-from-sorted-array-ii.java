@@ -4,8 +4,7 @@ class Solution {
          int point=2;
         for(int i=2;i<nums.length;i++){
             if(nums[i]!=nums[point-2]){
-                nums[point]=nums[i];
-                point++;
+                nums[point++]=nums[i];
             }
         }
         return point;
