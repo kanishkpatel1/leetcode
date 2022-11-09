@@ -1,4 +1,13 @@
 class Solution {
+    int[]  numsInsert(int[] arr,int index,int val ){
+          for(int k=arr.length-1;k>index;--k){
+                    arr[k]=arr[k-1];
+                   
+                }
+                 arr[index]=val;
+        return arr;
+    }
+    
     public int[] createTargetArray(int[] nums, int[] index) {
         int n=nums.length;
         int arr[]=new int[n];
@@ -11,11 +20,9 @@ class Solution {
             }
             else{     // if index is repeated then we should insert the element
                 //and shift the rest of the array 
-                for(int k=arr.length-1;k>index[i];--k){
-                    arr[k]=arr[k-1];
-                   
-                }
-                 arr[index[i]]=nums[j++];
+                arr=numsInsert(arr,index[i],nums[j++]);
+                // function called numsInsert for doing our work shift Array
+              
             }
         }
         
