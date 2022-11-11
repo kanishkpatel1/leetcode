@@ -1,19 +1,14 @@
 class Solution {
     public boolean isSameAfterReversals(int num) {
-        int a=0;
       while(num>0){
-          if(num%10==0){
+          if(num%10==0){  
+              // if we get any Zero in last then then number will not same 
               return false;
-            // a++;
-            //   num/=10;
-            //   break;
           }
           else{
+              // if we did not find any zero in the last when we will get same after rev
               return true;
               } }  
-        // if(a==0){
-        //    return true; 
-        // }
         return true;
     }
 }
