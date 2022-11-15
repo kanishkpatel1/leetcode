@@ -4,6 +4,7 @@ class Solution {
         int r=0;  // right
         int max=0;
         Set<Character> check=new HashSet();  //for checking duplicate elements
+        // we can use frequency array to keep trace of duplicate elements but hash set is easier approach
         while(r<s.length()){
             char c=s.charAt(r);
             if(check.add(c)){
