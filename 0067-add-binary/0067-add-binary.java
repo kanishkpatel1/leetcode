@@ -13,6 +13,8 @@
 //     }
 // }
 
+
+// approach 2 --> best method 
 class Solution {
     public String addBinary(String a, String b) { 
         
