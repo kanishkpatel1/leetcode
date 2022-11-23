@@ -1,6 +1,6 @@
 class Solution {
     public char repeatedCharacter(String s) {
-        int arr[]=new int[26];
+        int arr[]=new int[26];  //using freq algo
         for(int i=0;i<s.length();i++){
             int a=s.charAt(i)-'a';
             arr[a]=arr[a]+1;
