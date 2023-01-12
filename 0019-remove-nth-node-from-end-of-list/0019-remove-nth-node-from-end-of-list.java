@@ -8,6 +8,8 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
+
+// I use removefromNth Start code just changing  some lines first calculate length of the linked list and then subtact that from  n 
 class Solution {
     public ListNode removeNthFromEnd(ListNode head, int n) {
         int length=0;
