@@ -9,7 +9,8 @@ class Solution {
         for(int j=1;j<word;j++){
             if(str[j].charAt(i)<str[j-1].charAt(i)){
                 res++;
-                break;
+               // System.out.println("kanishk"); 
+                break;  // it will stop the execution of current loop (j) 
             }
         }
         
