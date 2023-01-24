@@ -11,6 +11,14 @@ class Solution {
             }
             res+=(val+2)/3;
 // this formula will return the res according to our question if we dont want to use it  we can use below lines code so comment above line and uncomment below 6 lines
+            
+            // for 3 ==1
+                // 2=1
+                // 4=2
+                //5=2
+                //6=2
+                //7=3
+            
             // else if(val%3==0){
             //     res+=(val/3);
             // }
