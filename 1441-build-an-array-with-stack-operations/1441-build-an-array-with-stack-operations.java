@@ -10,7 +10,7 @@ class Solution {
                  ls.add("Pop");
              }
             else if(target[i]==curr){
-                i++;
+                i++;  // increase i only when the value matched with the array target[i] with current value else 
             }
             curr++;
         }
