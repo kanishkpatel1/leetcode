@@ -1,6 +1,8 @@
 class MyStack {
             
     Deque<Integer> dq=new LinkedList<>();
+    
+    // Using deque methods //-apna college 
     public MyStack() {
         
     }
