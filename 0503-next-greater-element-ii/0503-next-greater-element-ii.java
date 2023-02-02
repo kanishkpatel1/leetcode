@@ -1,5 +1,5 @@
 class Solution {
-    public int[] nextGreaterElements(int[] nums) {
+    public int[] nextGreaterElements(int[] nums) {   // bruteforce 
         int []arr=new int[nums.length];
         int l=nums.length;
         for(int i=0;i<nums.length;i++){
