@@ -1,5 +1,7 @@
 class Solution {
     public int countElements(int[] nums) {
+        
+        // first see hints of the que then you will understand the solution
         Arrays.sort(nums);
         int a=nums[0];
         int b=nums[nums.length-1];
