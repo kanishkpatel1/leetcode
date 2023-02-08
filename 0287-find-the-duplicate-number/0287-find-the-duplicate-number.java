@@ -45,21 +45,39 @@
     // }
 
 
-//4.  Method
+//4.  Method  Using Cycle detection
 
-    class Solution {
+    // class Solution {
+    // public int findDuplicate(int[] nums) {
+    //     int slow=nums[0];
+    //     int fast=nums[nums[0]];
+    //     while(slow!=fast){
+    //         slow=nums[slow];
+    //         fast=nums[nums[fast]];
+    //     }
+    //     fast=0;
+    //     while(slow!=fast){
+    //     slow=nums[slow];
+    //         fast=nums[fast];
+    //     }
+    //     return slow;
+    // }
+  //  }
+
+
+//5.Method  -->  Using frequency Array
+
+   class Solution {
     public int findDuplicate(int[] nums) {
-        int slow=nums[0];
-        int fast=nums[nums[0]];
-        while(slow!=fast){
-            slow=nums[slow];
-            fast=nums[nums[fast]];
+        boolean []b=new boolean[100000+1];
+        for(int i=0;i<nums.length;i++){
+            if(b[nums[i]]==true){
+                return nums[i];
+            }
+            else{
+                b[nums[i]]=true;
+            }
         }
-        fast=0;
-        while(slow!=fast){
-        slow=nums[slow];
-            fast=nums[fast];
-        }
-        return slow;
+        return -1;
     }
-    }
+   }
