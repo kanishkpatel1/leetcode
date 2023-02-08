@@ -45,7 +45,8 @@
     // }
 
 
-//4.  Method  Using Cycle detection
+//4.  Method  Using Cycle detection 
+//Floyd’s Cycle Finding Algorithm
 
     // class Solution {
     // public int findDuplicate(int[] nums) {
@@ -69,7 +70,7 @@
 
    class Solution {
     public int findDuplicate(int[] nums) {
-        boolean []b=new boolean[100000+1];
+        boolean []b=new boolean[nums.length+1];
         for(int i=0;i<nums.length;i++){
             if(b[nums[i]]==true){
                 return nums[i];
@@ -81,3 +82,5 @@
         return -1;
     }
    }
+
+
