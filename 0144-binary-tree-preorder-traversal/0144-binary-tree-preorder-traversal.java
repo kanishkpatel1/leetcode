@@ -13,13 +13,13 @@
  *     }
  * }
  */
+
+// 1. Iterative Method 
 class Solution {
+    
+    
     public List<Integer> preorderTraversal(TreeNode root) {
-        
-        
-          
         List<Integer> ls=new ArrayList<>();
-        
         Stack<TreeNode> st=new Stack();
         if(root==null){
         return ls;    
@@ -30,8 +30,7 @@ class Solution {
             ls.add(n.val);
             if(n.right!=null){
                 st.push(n.right);
-                
-            }
+                }
             if(n.left!=null){
                 st.push(n.left);
             }
@@ -39,3 +38,19 @@ class Solution {
             return ls;
     }
 }
+
+
+// Recursive method
+
+// class Solution {
+//     public List<Integer> preorderTraversal(TreeNode root) {
+//         List<Integer> ls=new ArrayList<>();
+//         if(root==null){
+//             return ls;
+//         }
+//         ls.add(root.val);
+//         preorderTraversal(root.left);
+//         preorderTraversal(root.right);
+//         return ls;
+//     }
+// }
