@@ -13,20 +13,51 @@
  *     }
  * }
  */
+
+// // 1. Recursive method
+// class Solution {
+//     public List<Integer> postorderTraversal(TreeNode root) {
+//         List<Integer> ls=new ArrayList<>();
+//         post(root,ls); // helper method
+//         return ls;
+//     }
+    
+//     public void post(TreeNode root,List<Integer> ls){  // this is our helper method
+//         if(root==null){
+//             return;
+            
+//         }
+//         post(root.left,ls);
+//         post(root.right,ls);
+//         ls.add(root.val);
+//     }
+// }
+
+
+
+// 2. Iterative Method
+
 class Solution {
     public List<Integer> postorderTraversal(TreeNode root) {
         List<Integer> ls=new ArrayList<>();
-        post(root,ls); // helper method
-        return ls;
-    }
-    
-    public void post(TreeNode root,List<Integer> ls){  // this is our helper method
+        Stack<TreeNode> stk=new Stack<>();
         if(root==null){
-            return;
-            
+            return ls;
         }
-        post(root.left,ls);
-        post(root.right,ls);
-        ls.add(root.val);
+      //  List<Integer> ls=new ArrayList<>();
+       
+        stk.push(root);
+        while(!stk.isEmpty()){
+             TreeNode cur=stk.pop();
+            
+             ls.add(0,cur.val);
+            if(cur.left!=null){
+                stk.push(cur.left);
+            }
+            if(cur.right!=null){
+                stk.push(cur.right);
+            }
+        }
+        return ls;
     }
 }
