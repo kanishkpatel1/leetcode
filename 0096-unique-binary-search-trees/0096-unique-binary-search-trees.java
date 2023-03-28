@@ -1,5 +1,7 @@
 class Solution {
     
+    
+    // WE will have to just calculate the nth catalon number in this code
     int catalon(int n){
         int res=0;
         if(n<=1){
