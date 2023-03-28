@@ -13,6 +13,9 @@
  *     }
  * }
  */
+
+
+// WE use approach first we find the inorder of the tree and store it in an array list and in  a BST the values in the tree will be ascending order so if they not then return false
 class Solution {
     public boolean isValidBST(TreeNode root) {
                 List<Integer> ls=new ArrayList<>();
