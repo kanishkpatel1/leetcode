@@ -16,6 +16,7 @@
 class Solution {
     public int kthSmallest(TreeNode root, int k) {
         List<Integer> ls=new ArrayList<>();
+        // Store the val of all nodes in array list in ascending order by using inorder traversal and then return the (k-1) indexed value 
         inorder(root,ls);
         return ls.get(k-1);
     }
