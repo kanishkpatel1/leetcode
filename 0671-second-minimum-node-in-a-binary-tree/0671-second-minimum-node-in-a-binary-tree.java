@@ -26,7 +26,7 @@
 //         Collections.sort(ls);
 //         return ls.get(1);
 //     }
-    
+
 //      void inorder(TreeNode root,List<Integer> ls){
 //         if(root==null){
 //             return;
@@ -39,31 +39,29 @@
 //     }
 // }
 
-
-
-// Method 2 :- Using two variables like we find second max in array 
+// Method 2 :- Using two variables like we find second max in array
 class Solution {
-    int min=Integer.MAX_VALUE;
-    boolean flag=false;
-    int secondmin=Integer.MAX_VALUE;
+    int min = Integer.MAX_VALUE;
+    boolean flag = false;
+    int secondmin = Integer.MAX_VALUE;
+
     public int findSecondMinimumValue(TreeNode root) {
-       find(root);
-        
-        if(flag==false){
+        find(root); // calling the helper function
+        if (flag == false) { // if flag false after traverse all the tree it means there is no such elements so return false
             return -1;
         }
         return secondmin;
     }
-    public void find(TreeNode root){
-         if(root==null){
+
+    public void find(TreeNode root) {
+        if (root == null) {
             return;
         }
-        if(root.val<min){
-            min=root.val;
-        }
-       else if(root.val>min && root.val<=secondmin){
-            secondmin=root.val;
-           flag=true;
+        if (root.val < min) {  
+            min = root.val;
+        } else if (root.val > min && root.val <= secondmin) {  // if value of current node is greater than the minimum value and less than the second min value so change the value value of second minimum and flag becomes true as we find the second minimum
+            secondmin = root.val;
+            flag = true;
         }
         find(root.left);
         find(root.right);
