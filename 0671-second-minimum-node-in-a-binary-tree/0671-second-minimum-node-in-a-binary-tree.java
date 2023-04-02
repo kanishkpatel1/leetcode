@@ -13,25 +13,59 @@
  *     }
  * }
  */
+
+//Method 1 :- Using array list and inorder traversal
+
+// class Solution {
+//     public int findSecondMinimumValue(TreeNode root) {
+//         List<Integer> ls=new ArrayList<>();
+//         inorder(root,ls);
+//         if(ls.size()==1){
+//             return -1;
+//         }
+//         Collections.sort(ls);
+//         return ls.get(1);
+//     }
+    
+//      void inorder(TreeNode root,List<Integer> ls){
+//         if(root==null){
+//             return;
+//         }
+//         inorder(root.left,ls);
+//         if(!ls.contains(root.val)){
+//             ls.add(root.val);
+//         }
+//         inorder(root.right,ls);
+//     }
+// }
+
+
+
+// Method 2 :- Using two variables like we find second max in array 
 class Solution {
+    int min=Integer.MAX_VALUE;
+    boolean flag=false;
+    int secondmin=Integer.MAX_VALUE;
     public int findSecondMinimumValue(TreeNode root) {
-        List<Integer> ls=new ArrayList<>();
-        inorder(root,ls);
-        if(ls.size()==1){
+       find(root);
+        
+        if(flag==false){
             return -1;
         }
-        Collections.sort(ls);
-        return ls.get(1);
+        return secondmin;
     }
-    
-     void inorder(TreeNode root,List<Integer> ls){
-        if(root==null){
+    public void find(TreeNode root){
+         if(root==null){
             return;
         }
-        inorder(root.left,ls);
-        if(!ls.contains(root.val)){
-            ls.add(root.val);
+        if(root.val<min){
+            min=root.val;
         }
-        inorder(root.right,ls);
+       else if(root.val>min && root.val<=secondmin){
+            secondmin=root.val;
+           flag=true;
+        }
+        find(root.left);
+        find(root.right);
     }
 }
