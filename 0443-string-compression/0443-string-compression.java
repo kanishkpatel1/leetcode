@@ -21,11 +21,11 @@ class Solution {
          str+=count;
         }
         for(int i=0;i<str.length();i++){
-            chars[i]=str.charAt(i);
+            chars[i]=str.charAt(i);  // to convert input array with the conditions that given in the condition 
         }
        
-        System.out.println(str);
-        System.out.println(str.length());
+//         System.out.println(str);
+//         System.out.println(str.length());
         return str.length();
     }
 }
