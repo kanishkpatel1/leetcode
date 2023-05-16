@@ -15,7 +15,9 @@ class Solution {
         }
         
         
-        for(int i=0;i<26;i++){
+        for(int i=0;i<26;i++){  
+            // this step will check if a character is present in string 1 and not in string 2 means 
+            // value on freq1[i]==0 and freq2[i]!=0 then we will simply return 0 
             if((freq1[i]==0 && freq2[i]!=0)||(freq1[i]!=0 && freq2[i]==0)){
                 return false;
             }
