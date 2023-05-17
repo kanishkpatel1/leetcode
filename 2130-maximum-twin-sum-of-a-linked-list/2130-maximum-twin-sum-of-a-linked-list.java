@@ -19,8 +19,12 @@ class Solution {
             temp=temp.next;
             
         }
+        int a=stk.size();
+        int b=stk.size()/2;
         int max=Integer.MIN_VALUE;
-        while(stk.size()>stk.size()/2){
+        while(a>b){
+            a--;
+           
             max=Math.max(max,head.val+stk.pop());
             head=head.next;
         }
