@@ -6,12 +6,14 @@ class Solution {
         int b=Integer.valueOf(str1[1].replace("i",""));
         int c=Integer.valueOf(str2[0]);
         int d=Integer.valueOf(str2[1].replace("i",""));
-        int ansreal=a*c-b*d;
-        int ansimaginary=b*c+a*d;
+        // int ansreal=a*c-b*d;
+        // int ansimaginary=b*c+a*d;
         
-        String ans="";
-        ans+=ansreal+"+"+ansimaginary+"i";
-        return ans;
+        // String ans="";
+        // ans+=ansreal+"+"+ansimaginary+"i";
+        // return ans;
+        return String.valueOf(a*c-b*d)+"+"+String.valueOf(b*c+a*d)+"i";
+        
         
         
     }
