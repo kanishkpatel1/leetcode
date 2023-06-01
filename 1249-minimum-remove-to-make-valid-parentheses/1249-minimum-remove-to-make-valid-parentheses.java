@@ -5,6 +5,8 @@ class Solution {
     StringBuilder sb=new StringBuilder();
     int count=0;
     
+        
+  // left to right )---> (
     for(int i=0;i<ch.length;i++){
                 if(ch[i]=='('){
             count++;
@@ -16,12 +18,13 @@ class Solution {
         
         else{
             
-            ch[i]='0';
+            ch[i]='0'; // store zero in place of invalid bracket 
         }
         }
     }
-    count=0;
         
+    count=0;  // again make count zero for right to left 
+        // right to left (-------> )
     for(int i=ch.length-1;i>=0;i--){
         if(ch[i]==')'){
             count++;
@@ -33,7 +36,7 @@ class Solution {
         
         else{
             
-            ch[i]='0';
+            ch[i]='0'; // store zero in place of invalid bracket 
         }
         }
     }
