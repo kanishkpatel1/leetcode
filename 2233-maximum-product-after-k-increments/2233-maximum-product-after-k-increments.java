@@ -6,11 +6,8 @@
 // dry run same for another test case you will get the logic
 // multiplication of this will always be maximum
 // so maintain a priority que and add 1 untill the value of k be 0
-// 
-// 
-
 class Solution {
-         public static int maximumProduct(int[] nums, int k) {
+    public static int maximumProduct(int[] nums, int k) {
         PriorityQueue<Integer>pq=new PriorityQueue<>();
         int mod=1000000000+7;
         long ans=1;
