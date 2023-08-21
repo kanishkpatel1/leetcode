@@ -1,17 +1,17 @@
 class Solution {
     
-    public static boolean checkPrime(int n){
-        int count=0;
-        for(int i=2;i<=n;i++){
-            if(n%i==0){
-                count++;
-            }
-        }
-        return (count==1);
-    }
+    // public static boolean checkPrime(int n){
+    //     int count=0;
+    //     for(int i=2;i<=n;i++){
+    //         if(n%i==0){
+    //             count++;
+    //         }
+    //     }
+    //     return (count==1);
+    // }
     public boolean repeatedSubstringPattern(String s) {
         int len=s.length();
-        boolean prime=checkPrime(len);
+      //  boolean prime=checkPrime(len);
         String st="";
         String pt="";
         boolean check=false;
@@ -24,11 +24,11 @@ class Solution {
                 st+=pt;
                 
             }
-            if(i==1){
-                if(check==false && prime==true){
-                    return false;
-                }
-            }
+            // if(i==1){
+            //     if(check==false && prime==true){
+            //         return false;
+            //     }
+            // }
           //  System.out.println(st);
             if(st.equals(s)){
                 
