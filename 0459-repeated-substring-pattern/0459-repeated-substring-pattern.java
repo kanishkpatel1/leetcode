@@ -45,6 +45,8 @@
 // }
 
 // Optimized approach 
+// logic -->  first double the string and remove the first and last character  from the string and check if it contains the 
+// original string 
 class Solution {
     
     public boolean repeatedSubstringPattern(String s) {
