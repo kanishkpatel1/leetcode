@@ -26,7 +26,8 @@ class Solution {
         int indx=0;
          int ans=Integer.MAX_VALUE;
         for(int i=0;i<=n;i++){
-           
+           // at every index of i we will calculate the prefix count of x and suffix count of y and check the minimum of minimum index 
+            // because we will have to return the minimum index
             int sum=ncount[i]+ycount[i];
             if(sum<ans){
                 indx=i;
