@@ -1,21 +1,25 @@
 class Solution {
     public String largestGoodInteger(String num) {
-        String max="000";
+        String max="";
+        
+        int m=0;
         boolean temp=false;
         for(int i=2;i<num.length();i++){
-            if(num.charAt(i-2)==num.charAt(i) && num.charAt(i)==num.charAt(i-1)){
-               String n="";
-                temp=true;
-                n+=num.charAt(i-2);
-                n+=num.charAt(i-1);
-                n+=num.charAt(i);
-                if(n.charAt(0)>max.charAt(0)){
-                    max=n;
+           
+               String substr=num.substring(i-2,i+1);
+            boolean check= checksame(substr);
+            if(check){
+                if(substr.charAt(0)>=m){
+                    max=substr;
+                    m=substr.charAt(0);
                 }
             }
-        
+            
+            
         }
-       
-        return temp?max:"";
+       return max;
+    }
+    public boolean checksame(String num){
+         return (num.charAt(2)==num.charAt(0) && num.charAt(0)==num.charAt(1));   
     }
 }
