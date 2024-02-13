@@ -7,15 +7,18 @@ class Solution {
         }
         return "";
     }
-    public static void main(String[] args) {
-        String  str[]={"abc","car","ada","racecar","cool"};
-        System.out.println(firstPalindrome(str));
-    }
     public static boolean check(String str){
-        String newstr="";   
-        for(int i=str.length()-1;i>=0;i--){
-            newstr+=str.charAt(i);
+       int i=0;
+       int j=str.length()-1;
+        while(i<=j){
+            if(str.charAt(i)==str.charAt(j)){
+                i++;
+                j--;
+            }
+            else{
+                return false;
+            }
         }
-        return str.equals(newstr);
+        return true;
     }
 }
